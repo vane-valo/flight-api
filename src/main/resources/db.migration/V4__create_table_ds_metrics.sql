@@ -1,0 +1,7 @@
+CREATE TABLE ds_metrics (
+    id BIGSERIAL PRIMARY KEY,
+    total_requests INTEGER NOT NULL DEFAULT 0,
+    total_exitosas INTEGER NOT NULL DEFAULT 0,
+    total_fallidas INTEGER NOT NULL DEFAULT 0,
+    last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

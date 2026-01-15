@@ -3,7 +3,7 @@ package com.h12_25_l.equipo27.backend.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
+@Entity(name = "Aerolinea")
 @Table(name = "aerolinea")
 @Getter
 @Setter

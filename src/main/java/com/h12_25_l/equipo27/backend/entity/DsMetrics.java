@@ -5,7 +5,7 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Entity
+@Entity(name = "Ds_metrics")
 @Table(name = "ds_metrics")
 @Getter
 @Setter

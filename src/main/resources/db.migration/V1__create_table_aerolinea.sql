@@ -1,0 +1,8 @@
+CREATE TABLE aerolinea (
+    id BIGSERIAL PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL UNIQUE,
+    iata VARCHAR(3) NOT NULL UNIQUE
+);
+
+
+
