@@ -1,25 +1,23 @@
 spring:
-
   config:
     activate:
-      on-profile: dev
+      on-profile: prod
 
   datasource:
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
     driver-class-name: org.postgresql.Driver
-    username: postgres
-    url: jdbc:postgresql://maglev.proxy.rlwy.net:5432/railway
-    password: xpAaKlmaPltkFGPSmKlvrARVuYfCUtEV
 
   flyway:
     enabled: true
     baseline-on-migrate: true
-    locations: classpath:db/migration/
+    locations: classpath:db/migration
 
   jpa:
-    format-sql: 'true'
     hibernate:
-      ddl-auto: update
-    show-sql: 'true'
+      ddl-auto: validate
+    show-sql: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
